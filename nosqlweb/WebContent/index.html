@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Adicionar um novo funcionário</h1>
+	<form action="SaveServlet" method="post">
+		<table>
+			<tr>
+				<td>ID:</td>
+				<td><input type="text" name="id" /></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="nomeFunc" /></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" /></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="email" name="email" /></td>
+			</tr>
+			<tr>
+				<td>País:</td>
+				<td><select name="country" style="width: 150px">
+						<option>Brasil</option>
+						<option>Estado Unidos</option>
+						<option>Inglaterra</option>
+						<option>Argentina</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Salvar Funcionário" /></td>
+			</tr>
+		</table>
+	</form>
+
+	<br />
+	<a href="ViewServlet">Listar os funcionários</a>
+
+</body>
+</html>
