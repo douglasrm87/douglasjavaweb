@@ -1,7 +1,6 @@
 package web;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //https://www.alura.com.br/artigos/recebendo-dados-de-um-formulario-html-com-servlets
-// http://localhost:8181/nosqlweb/nosql
+// http://localhost:8080/nosqlweb/nosql
 @WebServlet("/nosql")
 public class ExemploServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
