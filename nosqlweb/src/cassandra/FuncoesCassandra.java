@@ -102,18 +102,18 @@ public class FuncoesCassandra {
 
 	public Boolean createTabela() {
 
-		Session session = CASConnectionFactory.getInstance().getSession(KEY_SPACE_NAME);
-		session.execute(CQLQueryConstants.CREATE_TABELA_USUARIO);
-		session.close();
+		Session sessionL = CASConnectionFactory.getInstance().getSession(KEY_SPACE_NAME);
+		sessionL.execute(CQLQueryConstants.CREATE_TABELA_USUARIO);
+		sessionL.close();
 		return Boolean.TRUE;
 	}
 
 	public Boolean inserirTabelaUsuario(int id, String nome, String endereco) {
-		Session session = CASConnectionFactory.getInstance().getSession(KEY_SPACE_NAME);
+		Session sessionL = CASConnectionFactory.getInstance().getSession(KEY_SPACE_NAME);
 		PreparedStatement prepared = session.prepare(CQLQueryConstants.INSERT_USUARIO);
 		BoundStatement boundStmt = prepared.bind(id, nome, endereco);
-		session.execute(boundStmt);
-		session.close();
+		sessionL.execute(boundStmt);
+		sessionL.close();
 		return Boolean.TRUE;
 	}
 }

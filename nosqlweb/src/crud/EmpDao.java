@@ -126,8 +126,8 @@ public class EmpDao {
 		} else {
 			List<Emp> list = new ArrayList<Emp>();
 
-			int cassandra = 0;
-			if (cassandra == 0) {
+			int cassandraL = 0;
+			if (cassandraL == 0) {
 				Emp e = new Emp();
 				e.setId(1);
 				e.setName("Douglas Mendes");
